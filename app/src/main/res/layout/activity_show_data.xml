@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_weight="4"
         android:gravity="center"
-        android:background="#E51E4C"
+        android:background="#9C27B0"
         android:layout_height="match_parent">
         <Button
             android:id="@+id/btnshow"

@@ -2,12 +2,15 @@ package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 
 import java.sql.*;
 
@@ -21,6 +24,7 @@ public class Save_data extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_data);
+        getSupportActionBar().setTitle("MySqlApp");
         txtname = findViewById(R.id.txtname);
         txtsurname = findViewById(R.id.txtsurname);
         txttel = findViewById(R.id.txttel);
@@ -33,7 +37,21 @@ public class Save_data extends AppCompatActivity {
                 new myData().execute("");
             }
         });
+        btncancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDialog().dismiss();
+            }
+        });
+
+
+
     }
+
+    private DialogInterface getDialog() {
+        return null;
+    }
+
     private class myData extends AsyncTask<String,String,String>{
         String msg="";
         String name =txtname.getText().toString();

@@ -21,6 +21,8 @@ Connection c;
 //        tv=findViewById(R.id.tv);
         btok = findViewById(R.id.save);
         btshow = findViewById(R.id.show);
+        getSupportActionBar().setTitle("MySqlApp");
+
 
 
         btok.setOnClickListener(new View.OnClickListener() {

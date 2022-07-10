@@ -8,87 +8,78 @@
     android:gravity="center"
     tools:context=".Save_data"
     android:background="#CCE1F3">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:id="@+id/manageshow"
+        android:textSize="20dp"
+        android:padding="10dp"
 
-
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="473dp"
+        android:layout_height="445dp"
         android:layout_margin="25dp"
         android:background="@drawable/bg"
         android:elevation="20dp"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CRUD MySQL"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="@font/comicbd"
-            />
+        android:padding="20dp"
+        android:gravity="center">
 
         <EditText
-            android:id="@+id/txtname"
+            android:id="@+id/manageID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:fontFamily="@font/comicbd"
-            />
+            android:hint="ID" />
 
         <EditText
-            android:id="@+id/txtsurname"
+            android:id="@+id/manaName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Surname"
-            android:fontFamily="@font/comicbd"/>
+            android:hint="Enter Name" />
 
         <EditText
-            android:id="@+id/txttel"
+            android:id="@+id/manegeSurname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel"
-            android:inputType="phone"
-            android:fontFamily="@font/comicbd"/>
+            android:hint="Enter Surname" />
+
+        <EditText
+            android:id="@+id/manaTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Tel"
+            android:inputType="phone" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="100dp"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/ok"
+                android:id="@+id/btnUpdata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
-                android:textColor="@color/white"
-                android:text="Save" />
+                android:text="updata"
+                android:textColor="@color/white"/>
 
             <Button
-                android:id="@+id/cancle"
+                android:id="@+id/btnDelect"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#F44336"
                 android:textColor="@color/white"
-                android:text="cancle" />
+                android:text="Delect" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/txtcon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
     </LinearLayout>
 
 </LinearLayout>

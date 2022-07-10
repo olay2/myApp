@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
-        <activity android:name=".Show_data"></activity>
+        <activity
+            android:name=".manageData"
+            android:exported="false" />
+        <activity android:name=".Show_data" />
         <activity android:name=".Save_data" />
         <activity android:name=".MainActivity">
             <intent-filter>

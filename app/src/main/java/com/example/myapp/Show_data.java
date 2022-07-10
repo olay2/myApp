@@ -2,9 +2,11 @@ package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -25,6 +27,7 @@ public class Show_data extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_data);
+        getSupportActionBar().setTitle("CRUD MySQL");
         btnshow = findViewById(R.id.btnshow);
         listv = findViewById(R.id.lv);
         tvinfo = findViewById(R.id.txtview);
@@ -69,6 +72,15 @@ public class Show_data extends AppCompatActivity {
         protected void onPostExecute(String s) {
             ad=new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line,arrname);
             listv.setAdapter(ad);
+            listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                   String str = arrid.get(position).toString();
+                    Intent n = new Intent(Show_data.this,manageData.class);
+                    n.putExtra("id",str);
+                    startActivity(n);
+                }
+            });
         }
     }
 }
